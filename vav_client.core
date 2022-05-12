@@ -1,0 +1,17 @@
+CAPI=2:
+
+name: "bci:vav:client:1.0"
+description: "Top-level manifest for Vulcan-Athos-Verilator simulation (client side)."
+
+filesets:
+  files_vav:
+    depend:
+      - bci:athos_sw:all:1.0
+
+targets:
+  sim:
+    default_tool: verilator
+    filesets:
+      - files_vav
+    toplevel: porthos_verilator
+
